@@ -1,0 +1,91 @@
+preciso pegar o elementos guardar em um poo 
+limpar campos
+apagar registro
+fazer registro
+
+Desenvolver uma aplicação web que permita cadastrar, listar e excluir clientes usando a API do CrudCrud. O objetivo é praticar o consumo de APIs com Fetch API, manipulando requisições GET, POST e DELETE.
+
+Estrutura do Projeto:
+
+Criar um projeto com os seguintes arquivos:
+
+index.html (Interface da aplicação)
+
+scripts.js (Código JavaScript para interagir com a API)
+
+styles.css (Estilos básicos, opcional)
+
+Funcionalidades da Aplicação:
+
+Cadastrar Cliente: O usuário pode inserir um nome e um e-mail e salvar na API.
+
+Listar Clientes: Todos os clientes cadastrados são exibidos na tela.
+
+Excluir Cliente: Criar um botão para remover um cliente da API.
+
+Como submeter sua entrega:
+
+Crie um repositório público no GitHub com os arquivos HTML, CSS (se aplicável) e JavaScript.
+
+Compartilhe o link do repositório.
+
+Dicas:
+
+Leia a documentação do CrudCrud para entender como interagir com a API.
+
+Teste as requisições no Postman, navegador e no DevTools (F12 → Aba Network).
+
+Utilize console.log() para depurar erros no JavaScript.
+
+https://crudcrud.com/api/0b6e10a174714a9f982466b583a8592c
+
+Refatorar a aplicação desenvolvida anteriormente, aplicando as técnicas aprendidas para melhorar a organização, reutilização e legibilidade do código.
+
+Estrutura do Projeto
+Reorganize seu código em módulos separados, criando os seguintes arquivos de sugestão:
+
+index.html → Interface da aplicação.
+
+/js/ 
+
+classes.js → Definição das classes.
+
+utils.js → Funções auxiliares.
+
+app.js → Código principal.
+
+styles.css (opcional) → Estilos básicos para a aplicação.
+
+Refatorações Necessárias
+Manter Programação Orientada a Objetos (POO)
+
+Separar Código em Módulos (ES Modules)
+-Criar arquivos classes.js, utils.js e app.js, garantindo que cada um tenha uma responsabilidade específica.
+
+-Utilizar import/export para organizar as funcionalidades.
+
+Aplicar Técnicas de Programação Funcional-Utilizar
+métodos como map(), find() e reduce()
+
+-Criar funções puras sempre que possível.
+
+Melhorar Manipulação do DOM-Utilizar
+addEventListener() para capturar eventos sem usar eventos direto no HTML.
+
+Validar Entradas e Melhorar Experiência do Usuário
+
+-Garantir que a interface seja dinâmica, atualizando os valores sem precisar recarregar a página.
+
+Entrega
+Refatore seu código aplicando as melhorias sugeridas.
+
+Mantenha o repositório público no GitHub 
+
+Compartilhe o link do repositório.
+
+Dicas
+Use o código da atividade anterior como base para estruturar a refatoração.
+
+Consulte os exemplos de map(), reduce() e find() vistos em aula.
+
+Utilize console.log() para testar os métodos antes de integrá-los à interface.
