@@ -1,7 +1,7 @@
-class cliente {
-    constructor (dados){
-        this.Nome = NOME;
-        this.Email = EMAIL; 
+export class Cliente {
+    constructor (nome, email){
+        this.Nome = nome;
+        this.Email = email; 
     }
 }
 
