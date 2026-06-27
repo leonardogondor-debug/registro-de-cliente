@@ -1,12 +1,12 @@
 export class Cliente {
     constructor (nome, email){
-        this.Nome = nome;
-        this.Email = email; 
+        this.nome = nome;
+        this.email = email; 
     }
 }
 
 class gerenciaCliet {
     constructor() {
-        this.gerenciaCliet
+        this.clientes = JSON.parse()
     }
 }
