@@ -10,7 +10,17 @@ console.log(gerenciador.clientes);
 
 //pega elementos do HTML
 const REGISTROS = document.getElementById("registros");
+const Lista = document.getElementById("lista");
 
+//atualiza lista no dom
+function rende() {
+    Lista.innerHTML = " ";
+
+    gerenciador.getAll().forEach(clientes =>{
+        const li = document.createElement("li");
+        li.textContent = `${clientes.nome} ${clientes.email}`;
+    })
+}
 
 REGISTROS.addEventListener("submit", async (event) => {
     event.preventDefault();
