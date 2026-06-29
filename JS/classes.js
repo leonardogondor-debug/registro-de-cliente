@@ -5,7 +5,7 @@ export class Cliente {
     constructor (nome, email, id){
         this.nome = nome;
         this.email = email; 
-        this.id = id;
+        this._id = id;
     }
 }
 
@@ -15,9 +15,9 @@ export class gerenciaCliet {
         this.clientes = [];
     }
 
-    async carregarDaApii() {
-        const dados = await pegarDados();
-        this.clientes = dados.map(c => new Cliente(c.nome, c.email, c._id));
+    async carregarDaApi() {
+        const resposta = await pegarDados();
+        this.clientes = resposta.map(c => new Cliente(c.nome, c.email, c._id));
     }
     
     async apagaCliente(id) {
@@ -26,6 +26,6 @@ export class gerenciaCliet {
     }
     
     getAll() {
-        return thi.clientes;
+        return this.clientes;
     }
 }

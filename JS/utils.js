@@ -1,14 +1,14 @@
+
 //pegar dados da api
 export async function pegarDados() {
-    const url = "https://crudcrud.com/api/d4e46efc61a24f9eb0ab4c4fa2b6e00a/clientes";
+    const url = "https://crudcrud.com/api/6ee4846d88d0455abd691a44d63d801b/clientes";
     const resposta = await fetch(url);
-    const dados = await resposta.json();
-    return dados;
+    return await resposta.json();
 }
 
 //apaga dado da api
 export async function apagaDado(id) {
-    const url = `https://crudcrud.com/api/d4e46efc61a24f9eb0ab4c4fa2b6e00a/clientes/${id}`;
+    const url = `https://crudcrud.com/api/6ee4846d88d0455abd691a44d63d801b/clientes/${id}`;
 
     const resposta = await fetch(url, {
         method: "DELETE"
