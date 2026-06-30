@@ -1,14 +1,19 @@
 
 //pegar dados da api
 export async function pegarDados() {
-    const url = "https://crudcrud.com/api/6ee4846d88d0455abd691a44d63d801b/clientes";
-    const resposta = await fetch(url);
-    return await resposta.json();
+    const url = "https://crudcrud.com/api/010c2faaa0a843d0922ddd34af6cd387/clientes";
+    try {
+       const resposta = await fetch(url);
+       return await resposta.json();
+    } catch (erro) {
+        console.error("Erro ao buscar dados:", erro);
+        return [];
+    }
 }
 
 //apaga dado da api
 export async function apagaDado(id) {
-    const url = `https://crudcrud.com/api/6ee4846d88d0455abd691a44d63d801b/clientes/${id}`;
+    const url = `https://crudcrud.com/api/010c2faaa0a843d0922ddd34af6cd387/clientes/${id}`;
 
     const resposta = await fetch(url, {
         method: "DELETE"
@@ -20,3 +25,17 @@ export async function apagaDado(id) {
         console.log("Erro ao apagar", resposta.status);
     }   
 }
+
+//checa se email ou usuario ja existe
+export function clienteExiste(lista, novoCliente) {
+    return lista.find(c => 
+        c.email === novoCliente.email || c.nome.toLowerCase().trim() === novoCliente.nome.toLowerCase().trim()
+    );
+}
+
+//total de cliente cadastrados
+export function totalClientes (lista) {
+    return lista.reduce((total, cliente) => {
+        return total + 1;
+    }, 0);
+} 

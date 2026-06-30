@@ -1,6 +1,6 @@
-import { pegarDados } from "./utils.js";
-import { apagaDado } from "./utils.js";
+import { pegarDados, apagaDado } from "./utils.js";
 
+//cria cliente
 export class Cliente {
     constructor (nome, email, id){
         this.nome = nome;

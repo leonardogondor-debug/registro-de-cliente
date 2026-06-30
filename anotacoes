@@ -1,8 +1,3 @@
-preciso pegar o elementos guardar em um poo 
-limpar campos
-apagar registro
-fazer regicrudcrud.com/api/0b6e10a174714a9f982466b583a8592c
-stro
 
 Desenvolver uma aplicação web que permita cadastrar, listar e excluir clientes usando a API do CrudCrud. O objetivo é praticar o consumo de APIs com Fetch API, manipulando requisições GET, POST e DELETE.
 
