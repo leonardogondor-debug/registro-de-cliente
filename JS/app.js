@@ -1,12 +1,8 @@
-import { Cliente } from "./classes.js";
-import { pegarDados } from "./utils.js";
-import { clienteExiste } from "./utils.js";
-import { totalClientes } from "./utils.js";
-import { gerenciaCliet } from "./classes.js";
-
+import { gerenciaClient } from "./classes.js";
+import { clienteExiste, totalClientes } from "./utils.js";
 
 //instacia do gerenciador
-const gerenciador = new gerenciaCliet();
+const gerenciador = new gerenciaClient();
 await gerenciador.carregarDaApi();
 
 console.log(gerenciador.clientes);
@@ -21,7 +17,7 @@ const Benviar = document.getElementById("enviar");
 async function render() {
     Lista.innerHTML = "";
 
-    const clientes = await gerenciador.getAll();
+    const clientes = gerenciador.getAll();
 
     const total = await totalClientes(clientes);
     totalP.textContent = `TOTAL DE CLIENTES: ${total}`;
@@ -65,28 +61,17 @@ REGISTROS.addEventListener("submit", async (event) => {
     };
     
     //pega lista atual
-    await gerenciador.carregarDaApi();
-    const lista = await gerenciador.getAll();
+    const lista = gerenciador.getAll();
 
     //checa duplicado
     if (clienteExiste(lista, cliente)) {
         alert("nome ou email ja cadastrado!");
+        Benviar.disabled = false;
         return;
     }
 
     try {
-        const resposta = await fetch("https://crudcrud.com/api/010c2faaa0a843d0922ddd34af6cd387/clientes", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(cliente)
-        });
-
-        if (!resposta.ok){
-            return alert("erro ao salvar");
-        }
-        await gerenciador.carregarDaApi();
+        await gerenciador.addCliente(cliente);
         render();  
         REGISTROS.reset();
     } catch(erro){

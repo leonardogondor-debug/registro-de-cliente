@@ -4,7 +4,7 @@ export async function pegarDados() {
     const url = "https://crudcrud.com/api/010c2faaa0a843d0922ddd34af6cd387/clientes";
     try {
        const resposta = await fetch(url);
-       return await resposta.json();
+       return resposta.json();
     } catch (erro) {
         console.error("Erro ao buscar dados:", erro);
         return [];
@@ -33,7 +33,7 @@ export function clienteExiste(lista, novoCliente) {
     );
 }
 
-//total de cliente cadastrados
+//total de cliente cadastrados o ideal seria length mas e so para treinar o reduce
 export function totalClientes (lista) {
     return lista.reduce((total, cliente) => {
         return total + 1;
