@@ -22,7 +22,7 @@ export class gerenciaClient {
     
     async addCliente(cliente) {
         try {
-            const resposta = await fetch("https://crudcrud.com/api/010c2faaa0a843d0922ddd34af6cd387/clientes", {
+            const resposta = await fetch("https://crudcrud.com/api/289bbd1c52df433c95ab2b1eb8a02691/clientes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

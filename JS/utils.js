@@ -1,7 +1,7 @@
 
 //pegar dados da api
 export async function pegarDados() {
-    const url = "https://crudcrud.com/api/010c2faaa0a843d0922ddd34af6cd387/clientes";
+    const url = "https://crudcrud.com/api/289bbd1c52df433c95ab2b1eb8a02691/clientes";
     try {
        const resposta = await fetch(url);
        return resposta.json();
@@ -13,7 +13,7 @@ export async function pegarDados() {
 
 //apaga dado da api
 export async function apagaDado(id) {
-    const url = `https://crudcrud.com/api/010c2faaa0a843d0922ddd34af6cd387/clientes/${id}`;
+    const url = `https://crudcrud.com/api/289bbd1c52df433c95ab2b1eb8a02691/clientes/${id}`;
 
     const resposta = await fetch(url, {
         method: "DELETE"

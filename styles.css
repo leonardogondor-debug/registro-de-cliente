@@ -1,1 +1,85 @@
-/* FAZER UM ADDCLIENTE */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+p {
+    display: flex;
+    margin: 10px;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px; 
+    align-items: center;   
+}
+
+input {
+    padding: 10px 100px 10px 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.enviar {
+    background-color: #4CAF50;
+    padding: 10px;
+    margin: 10px;
+    height: 40px;
+    width: 100px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background-color: #45a049;
+}
+
+.enviar:active{
+    background-color: #74dd77;
+}
+
+
+li {
+    list-style-type: none;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.excluir {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.excluir:hover {
+    background-color: #da190b;
+}
+
+.excluir:active {
+    background-color: #f77b7b;
+}
